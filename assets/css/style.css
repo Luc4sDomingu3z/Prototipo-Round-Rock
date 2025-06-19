@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* ROOT */
+
+:root {
+  --red: #dd4c4a;
+  --black: #4f4f4f;
+  --yellow: #f2c94c;
+  --gray: #f2f2f2;
+  /*  */
+  --serviceShadowBtn: #fb707073;
+  --serviceBtnRed1: #eb7598;
+  --serviceBtnRed2: #ff926f;
+  --serviceBtnGradient: linear-gradient(
+    90deg,
+    var(--serviceBtnRed1) 0%,
+    var(--serviceBtnRed2) 100%
+  );
+}
+
+/* Reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Noto Sans", sans-serif;
+  line-height: 1;
+}
+
+/* App */
+
+main.main-container {
+  background-color: #fff;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: calc(1839px - 350px);
+  margin: 0 auto;
+}
+
+/*
+Header
+*/
+header.top-header {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  max-height: 100vh;
+}
+
+.header-background {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.intro-section {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 400px 1fr;
+  justify-content: center;
+}
+
+.intro-section .logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.intro-section .logo-container > img {
+  object-fit: cover;
+  width: 100%;
+  max-width: max-content;
+  overflow: hidden;
+}
+
+.intro-roundRock {
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  margin: auto;
+  text-align: left;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+
+.intro-roundRock h2 {
+  color: var(--black);
+  font-size: 34px;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+
+.intro-roundRock h1 {
+  color: var(--red);
+  font-size: calc(6vw - 0.5pt);
+  font-weight: 800;
+  text-transform: capitalize;
+  margin-bottom: calc(1rem / 2);
+}
+
+.intro-roundRock p {
+  margin-top: 1rem;
+  color: var(--black);
+  font-weight: 450;
+  line-height: 1.45;
+  font-size: 14px;
+  width: 100%;
+}
+
+.intro-actions-container {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 2rem;
+}
+
+.intro-actions-container a {
+  color: var(--red);
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  text-transform: capitalize;
+  text-align: center;
+  border-radius: 50px;
+  width: 100%;
+  padding: 1rem;
+  max-width: 160px;
+  text-decoration: none;
+  transition: 300ms ease;
+}
+
+.intro-actions-container a:hover,
+.intro-actions-container a:focus,
+.intro-actions-container a:focus-within,
+.intro-actions-container a:active,
+.intro-actions-container a.active-link {
+  background-color: var(--yellow);
+  color: var(--black);
+}
+
+/* Servicoes Eletricos */
+
+.services-container {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 2px;
+  margin-top: 3rem;
+}
+
+.services-container hgroup {
+  width: 100%;
+  text-align: left;
+}
+
+.services-container hgroup h2 {
+  font-size: 30px;
+  color: var(--black);
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.services-container hgroup h1 {
+  font-size: calc(6vw - 0.5pt);
+  color: var(--red);
+}
+
+.services-content-container {
+  margin-top: 4rem;
+  border-radius: 16%;
+  background-color: var(--gray);
+  padding: 1rem;
+  padding-top: 3rem;
+}
+
+.services-content {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.services-content article {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2rem;
+}
+
+.services-content .srv-card {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-flow: column nowrap;
+  filter: drop-shadow(0px 0px 16px #00000030);
+}
+
+.services-content .srv-card .srv-card-content {
+  background-color: #fff;
+  overflow: hidden;
+  aspect-ratio: 4/4;
+  border-radius: 30px;
+}
+
+.services-content .srv-card .srv-ttl {
+  display: flex;
+  font-size: 20px;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  color: var(--black);
+  font-weight: 600;
+  padding: 8px;
+  min-height: 60px;
+}
+
+.services-content .srv-card .srv-link {
+  background-color: var(--serviceBtnRed1);
+  background: var(--serviceBtnGradient);
+  width: 100%;
+  max-width: 180px;
+  margin: auto;
+  transform: translateY(-25px);
+  filter: drop-shadow(0px 0px 8px var(--serviceShadowBtn));
+  padding: 1rem;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  transition: 300ms ease;
+}
+
+.services-content .srv-card .srv-link:hover {
+  filter: drop-shadow(0px 0px 10px var(--yellow));
+  transform: scale(1.1) translateY(-25px);
+}
